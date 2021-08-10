@@ -15,7 +15,7 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->index('category_id');
             $table->string('title');
             $table->integer('release_year');
             $table->timestamps();
